@@ -422,6 +422,7 @@
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
             .then(response =>{
               myAlert.classList.toggle('d-none');
+              form.reset();
               console.log('Success!', response)
             })
             .catch(error => console.error('Error!', error.message))
